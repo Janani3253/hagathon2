@@ -1,0 +1,19 @@
+int singleNumber(int* nums, int numsSize) {
+    int i,j,res;
+    for(i=0;i<numsSize;i++){
+        for(j=i+1;j<numsSize;j++){
+            if(nums[i]==nums[j])
+            {
+                nums[i]=-999;
+                nums[j]=-999;
+            }
+        }
+    }
+    for(i=0;i<numsSize;i++)
+    {
+    if(nums[i]!=-999){
+        res=nums[i];
+    }
+    }
+    return res;
+}
