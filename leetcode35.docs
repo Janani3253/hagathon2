@@ -1,0 +1,24 @@
+int searchInsert(int* nums, int numsSize, int target) {
+    int i,res;
+    
+    for(i=0;i<numsSize;i++)
+    {
+        if(nums[i]==target)
+        {
+            if(i==0){
+                res=i;
+            }
+            else{
+            res=i+1;
+            }
+        }
+    }
+    for(i=0;i<numsSize;i++)
+    {
+        if(target>nums[i])
+        {
+            res=i+1;
+        }
+    }
+    return res;
+}
