@@ -1,0 +1,24 @@
+int majorityElement(int* nums, int numsSize) {
+    int i,j,count=1,val;
+    for(i=0;i<numsSize;i++){
+        for(j=i+1;j<numsSize;j++){
+            if(nums[i]==nums[j]){
+                count++;
+                if(count>numsSize/2){
+                    val=nums[i];
+                    
+                }
+               
+            }
+            
+        }
+    }
+    for(i=0;i<numsSize;i++){
+        if(count==1){
+            if(count>numsSize/2){
+            val=nums[i];
+            }
+        }
+    }
+    return val;
+}
